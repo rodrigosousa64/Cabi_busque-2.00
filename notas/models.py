@@ -14,6 +14,10 @@ class CourseOffering(models.Model):
     def __str__(self):
         return f"{self.course_name} - {self.institution} ({self.campus})"
 
+    class Meta:
+        db_table = 'cota_min_and_max_enem_courseoffering'
+        managed = False
+
 class QuotaData(models.Model):
     course_offering = models.ForeignKey(CourseOffering, on_delete=models.CASCADE, related_name="quotas")
 
@@ -74,6 +78,10 @@ class QuotaData(models.Model):
     def __str__(self):
         return f"{self.quota_code} ({self.institution}) - {self.course_offering.course_name}"
 
+    class Meta:
+        db_table = 'cota_min_and_max_enem_quotadata'
+        managed = False
+
 class PerfilCandidatoDB(models.Model):
     RACA_CHOICES = [
         ('branca', 'Branca'),
@@ -91,3 +99,7 @@ class PerfilCandidatoDB(models.Model):
 
     def __str__(self):
         return f"Perfil de {self.user.username}"
+
+    class Meta:
+        db_table = 'cota_min_and_max_enem_perfilcandidatodb'
+        managed = False
