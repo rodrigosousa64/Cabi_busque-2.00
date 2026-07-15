@@ -6,7 +6,7 @@ from .serializers import CourseOfferingSerializer, QuotaDataSerializer
 
 # Create your views here.
 class CourseOfferingViewSet(viewsets.ModelViewSet):
-    queryset = CourseOffering.objects.all()
+    queryset = CourseOffering.objects.all().prefetch_related('quotas')
     serializer_class = CourseOfferingSerializer
 
 class QuotaDataViewSet(viewsets.ModelViewSet):

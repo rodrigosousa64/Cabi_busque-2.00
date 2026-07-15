@@ -11,5 +11,15 @@ class CourseOfferingSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CourseOffering
-        fields = '__all__'
-
+        fields = [
+            'id', 
+            'institution', 
+            'year_reference', 
+            'course_name', 
+            'campus', 
+            'degree', 
+            'shift', 
+            'total_spots_filled', 
+            'leftover_spots', 
+            'quotas'
+        ]
