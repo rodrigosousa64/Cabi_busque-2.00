@@ -2,9 +2,12 @@ from rest_framework import serializers
 from .models import CourseOffering, QuotaData, PerfilCandidatoDB
 
 class QuotaDataSerializer(serializers.ModelSerializer):
+    
     class Meta:
         model = QuotaData
-        fields = '__all__'
+        fields = '__all__'     # Adiciona todos os campos do modelo automaticamente
+
+
 
 class CourseOfferingSerializer(serializers.ModelSerializer):
     quotas = QuotaDataSerializer(many=True, read_only=True)
