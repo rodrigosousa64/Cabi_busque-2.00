@@ -1,0 +1,105 @@
+/* ============================================
+   AD SLOT COMPONENT — Mobile-First Ad Strategy
+   ============================================ */
+
+.ad-slot {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad-slot__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.04));
+  border: 1px solid rgba(48, 54, 61, 0.5);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ad-slot__label {
+  font-size: 0.6rem;
+  color: rgba(139, 148, 158, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 4px;
+  left: 8px;
+}
+
+/* === BANNER (Entre Seções) === */
+.ad-slot--banner .ad-slot__inner {
+  width: 100%;
+  height: 100px;
+}
+
+/* === IN-FEED (Entre Cards de Resultado) === */
+.ad-slot--in-feed {
+  grid-column: 1 / -1; /* Ocupa largura total do grid */
+}
+.ad-slot--in-feed .ad-slot__inner {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+}
+
+/* === STICKY BOTTOM (Mobile Footer) === */
+.ad-slot--sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+  background: rgba(1, 4, 9, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border-color);
+  padding: 5px 0;
+  display: none; /* Hidden on desktop */
+}
+.ad-slot--sticky .ad-slot__inner {
+  width: 320px;
+  height: 50px;
+  border: none;
+  background: transparent;
+}
+
+/* === SKYSCRAPER (Desktop Sidebar) === */
+.ad-slot--skyscraper .ad-slot__inner {
+  width: 100%;
+  min-height: 250px;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .ad-slot--banner .ad-slot__inner {
+    height: 80px;
+  }
+
+  .ad-slot--in-feed .ad-slot__inner {
+    height: 100px;
+  }
+
+  .ad-slot--sticky {
+    display: flex;
+  }
+
+  .ad-slot--skyscraper {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .ad-slot--banner .ad-slot__inner {
+    max-width: 728px;
+    height: 90px;
+  }
+
+  .ad-slot--sticky {
+    display: none;
+  }
+}

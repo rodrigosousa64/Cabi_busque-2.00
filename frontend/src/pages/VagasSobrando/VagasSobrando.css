@@ -1,0 +1,26 @@
+.vagas-sobrando-card {
+  border-left: 4px solid var(--accent-orange, #ff6b00);
+}
+
+.vagas-sobrando-highlight {
+  margin: 12px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sobras-badge {
+  background: rgba(255, 107, 0, 0.15);
+  color: var(--accent-orange, #ff6b00);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(255, 107, 0, 0.3);
+}
+
+.sobras-badge strong {
+  font-size: 1.1rem;
+}

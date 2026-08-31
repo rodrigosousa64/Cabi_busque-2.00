@@ -1,0 +1,371 @@
+/* ============================================
+   LAYOUT — Mobile-First Design
+   ============================================ */
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ============================================
+   MOBILE HEADER (Top Bar)
+   ============================================ */
+.mobile-header {
+  display: none; /* Hidden on desktop */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background: rgba(1, 4, 9, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1001;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.mobile-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #00e5ff;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.mobile-brand-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.mobile-header-spacer {
+  width: 40px; /* Balance with toggle button */
+}
+
+/* ============================================
+   SIDEBAR
+   ============================================ */
+.sidebar {
+  width: 270px;
+  background-color: rgba(1, 4, 9, 0.97);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1002;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.capibot-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
+  margin-bottom: 12px;
+}
+
+.sidebar-title {
+  color: #00e5ff;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.sidebar-subtitle {
+  color: var(--accent-green);
+  font-size: 0.75rem;
+  margin-top: 6px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Navigation */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: var(--text-primary);
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  min-height: 48px; /* Touch target mínimo recomendado */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-item:hover, .nav-item.active {
+  background-color: rgba(88, 166, 255, 0.1);
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.nav-item.active {
+  border-left: 3px solid var(--accent-blue);
+}
+
+.nav-icon {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.nav-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-main {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.nav-sub {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.nav-item.active .nav-sub {
+  color: rgba(88, 166, 255, 0.6);
+}
+
+/* Sidebar Ad */
+.sidebar-ad-wrapper {
+  padding: 15px;
+  margin-top: auto;
+}
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1001;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.main-content {
+  flex: 1;
+  margin-left: 270px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.ad-top-banner {
+  margin-bottom: 16px;
+}
+
+.content-area {
+  background: rgba(1, 4, 9, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  /* backdrop-filter removido pois quebra o position: fixed dos botões flutuantes */
+  flex: 1;
+}
+
+/* ============================================
+   MOBILE BOTTOM NAVIGATION
+   ============================================ */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(1, 4, 9, 0.97);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 800;
+  padding: 0 8px;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.6rem;
+  gap: 3px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  min-width: 60px;
+}
+
+.bottom-nav-item.active {
+  color: var(--accent-blue);
+}
+
+.bottom-nav-item span {
+  font-weight: 600;
+}
+
+/* ============================================
+   VISIBILITY HELPERS
+   ============================================ */
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  display: block;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+@media (max-width: 992px) {
+  /* Show mobile header */
+  .mobile-header {
+    display: flex;
+  }
+
+  /* Sidebar off-screen by default */
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Main content takes full width */
+  .main-content {
+    margin-left: 0;
+    padding: 68px 12px 130px 12px; /* top: header, bottom: bottom-nav + sticky ad */
+  }
+
+  .content-area {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  /* Show mobile elements */
+  .mobile-only {
+    display: flex;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .main-content {
+    padding: 60px 8px 130px 8px;
+  }
+
+  .content-area {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .mobile-brand span {
+    font-size: 0.85rem;
+  }
+}
+
+/* ============================================
+   GLOBAL FAB (Menu)
+   ============================================ */
+.global-fab-menu {
+  position: fixed;
+  bottom: 80px;
+  right: 16px;
+  z-index: 1500;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: rgba(13, 17, 23, 0.95);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+.global-fab-menu:active {
+  transform: scale(0.92);
+}
+.global-fab-label {
+  position: absolute;
+  right: 60px;
+  background: rgba(1, 4, 9, 0.9);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  white-space: nowrap;
+  opacity: 0.9;
+  pointer-events: none;
+}
+

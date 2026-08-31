@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Courier+New&display=swap');
+
+:root {
+  --bg-primary: #0d1117;
+  --bg-secondary: rgba(13, 17, 23, 0.8);
+  --border-color: #30363d;
+  --text-primary: #c9d1d9;
+  --text-muted: #8b949e;
+  
+  --accent-blue: #58a6ff;
+  --accent-green: #39ff14;
+  --accent-yellow: #ffeb3b;
+  --accent-red: #ff3333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-weight: 600;
+}
+
+button, input {
+  font-family: inherit;
+}
