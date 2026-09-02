@@ -30,13 +30,23 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['capibusque-production.up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'capibusque.com.br',
+    'www.capibusque.com.br',
+    'capibusque-production.up.railway.app',
+    'localhost',
+    '127.0.0.1',
+]
 
 CSRF_TRUSTED_ORIGINS = [
+    'https://capibusque.com.br',
+    'https://www.capibusque.com.br',
     'https://capibusque-production.up.railway.app',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
 ]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
@@ -68,6 +78,9 @@ MIDDLEWARE = [
 
 # CORS - Permitir o frontend React acessar a API
 CORS_ALLOWED_ORIGINS = [
+    'https://capibusque.com.br',
+    'https://www.capibusque.com.br',
+    'https://capibusque-production.up.railway.app',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
 ]
