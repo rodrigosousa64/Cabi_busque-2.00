@@ -333,7 +333,7 @@
    ============================================ */
 .global-fab-menu {
   position: fixed;
-  bottom: 80px;
+  bottom: 140px; /* Acima da bottom nav (60px) + sticky ad (60px) */
   right: 16px;
   z-index: 1500;
   width: 52px;

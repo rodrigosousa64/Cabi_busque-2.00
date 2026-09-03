@@ -49,7 +49,7 @@
 /* === STICKY BOTTOM (Mobile Footer) === */
 .ad-slot--sticky {
   position: fixed;
-  bottom: 0;
+  bottom: 60px; /* Acima do mobile-bottom-nav (que tem 60px) */
   left: 0;
   width: 100%;
   z-index: 900;
