@@ -2,6 +2,9 @@
 __pycache__
 node_modules/
 venv/
+/package.json
+/package-lock.json
+venv/
 *.sqlite3
 dist/
 build/
