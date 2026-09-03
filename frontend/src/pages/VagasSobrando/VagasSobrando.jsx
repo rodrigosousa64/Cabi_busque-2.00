@@ -140,7 +140,7 @@ const VagasSobrando = () => {
   return (
     <div className="busca-container">
       <div className="sobras-page-header">
-        <h2>> VAGAS_SOBRANDO</h2>
+        <h2>{'>'} VAGAS_SOBRANDO</h2>
         <p>Cursos que não preencheram todas as vagas.</p>
       </div>
 
