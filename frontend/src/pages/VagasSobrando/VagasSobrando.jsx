@@ -13,6 +13,7 @@ const CursoSobrasCard = ({ curso, scores }) => {
       <div className="curso-header">
         <h4>{curso.course_name}</h4>
         <div className="curso-meta">
+          {curso.year_reference && <span className="year-badge">{curso.year_reference}</span>}
           <span className="instituicao-badge">{curso.institution}</span>
           <span className="campus-badge">{curso.campus}</span>
         </div>
@@ -138,11 +139,9 @@ const VagasSobrando = () => {
 
   return (
     <div className="busca-container">
-      <div className="busca-search-bar" style={{ padding: '20px', background: 'var(--card-bg)', borderRadius: '16px', marginBottom: '20px', textAlign: 'center' }}>
-        <h2 style={{ margin: 0, color: 'var(--text-primary)' }}>Oportunidades: Vagas Sobrando</h2>
-        <p style={{ margin: '8px 0 0', color: 'var(--text-secondary)' }}>
-          Cursos que não preencheram todas as vagas.
-        </p>
+      <div className="sobras-page-header">
+        <h2>> VAGAS_SOBRANDO</h2>
+        <p>Cursos que não preencheram todas as vagas.</p>
       </div>
 
       <div className="active-filters-bar">

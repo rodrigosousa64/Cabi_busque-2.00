@@ -463,6 +463,17 @@
   color: var(--text-muted);
 }
 
+.year-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: rgba(88, 166, 255, 0.12);
+  color: var(--accent-blue);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  border: 1px solid rgba(88, 166, 255, 0.25);
+}
+
 .cotas-list-container {
   display: none;
   margin-top: 12px;

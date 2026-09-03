@@ -13,6 +13,7 @@ const CursoCard = ({ curso, scores }) => {
       <div className="curso-header">
         <h4>{curso.course_name}</h4>
         <div className="curso-meta">
+          {curso.year_reference && <span className="year-badge">{curso.year_reference}</span>}
           <span className="instituicao-badge">{curso.institution}</span>
           <span className="campus-badge">{curso.campus}</span>
         </div>

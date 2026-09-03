@@ -1,3 +1,7 @@
+/* ============================================
+   VAGAS SOBRANDO PAGE — Overrides Mobile
+   ============================================ */
+
 .vagas-sobrando-card {
   border-left: 4px solid var(--accent-orange, #ff6b00);
 }
@@ -23,4 +27,27 @@
 
 .sobras-badge strong {
   font-size: 1.1rem;
+}
+
+/* ============================================
+   HEADER DA PÁGINA
+   ============================================ */
+.sobras-page-header {
+  text-align: center;
+  padding: 16px;
+  border-bottom: 1px dashed var(--border-color);
+  margin-bottom: 12px;
+}
+
+.sobras-page-header h2 {
+  color: var(--accent-blue);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.sobras-page-header p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 6px 0 0;
 }
