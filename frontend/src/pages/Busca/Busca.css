@@ -434,6 +434,9 @@
   transition: border-color 0.2s;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .curso-card:hover {
@@ -541,6 +544,7 @@
   background: rgba(0,0,0,0.3);
   border-radius: 6px;
   border-left: 3px solid var(--border-color);
+  min-width: 0;
 }
 
 .cota-item.passed {

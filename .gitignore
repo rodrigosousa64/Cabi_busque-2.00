@@ -1,2 +1,9 @@
 .env
 __pycache__
+node_modules/
+venv/
+*.sqlite3
+dist/
+build/
+.DS_Store
+
