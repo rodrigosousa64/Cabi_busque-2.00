@@ -21,7 +21,7 @@ cd ..
 
 echo "Instalando dependências do Backend..."
 cd backend
-pip3 install -r ../requirements.txt
+python3 -m pip install -r ../requirements.txt
 
 echo "Coletando arquivos estáticos..."
 python manage.py collectstatic --no-input
