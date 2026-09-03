@@ -28,8 +28,10 @@ const AdSlot = ({ position = 'banner', className = '', adSlotId }) => {
           style={{ display: 'block', width: '100%', height: '100%' }}
           data-ad-client="ca-pub-5532089904077605"
           data-ad-slot={adSlotId}
-          data-ad-format={position === 'sticky' || position === 'banner' ? 'horizontal' : 'auto'}
-          data-full-width-responsive={position === 'sticky' ? 'false' : 'true'}
+          {...(position === 'in-feed' || position === 'skyscraper' ? {
+            'data-ad-format': 'auto',
+            'data-full-width-responsive': 'true'
+          } : {})}
         />
       </div>
     </div>
