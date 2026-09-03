@@ -112,7 +112,7 @@
    ============================================ */
 .fab-group {
   position: fixed;
-  bottom: 144px; /* Shifted up to make space for the global Menu FAB */
+  bottom: 194px; /* 130px(menu FAB) + 52px(tamanho do FAB) + 12px(gap) */
   right: 16px;
   display: flex;
   flex-direction: column;
