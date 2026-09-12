@@ -6,6 +6,8 @@ import Regras from './pages/Regras/Regras.jsx';
 import PoliticaPrivacidade from './pages/Institucional/PoliticaPrivacidade.jsx';
 import TermosDeUso from './pages/Institucional/TermosDeUso.jsx';
 import Sobre from './pages/Institucional/Sobre.jsx';
+import Artigos from './pages/Artigos/Artigos.jsx';
+import ArtigoView from './pages/Artigos/ArtigoView.jsx';
 import Layout from './components/Layout/Layout.jsx';
 
 export const router = createBrowserRouter([
@@ -40,6 +42,14 @@ export const router = createBrowserRouter([
       {
         path: '/sobre',
         element: <Sobre />,
+      },
+      {
+        path: '/artigos',
+        element: <Artigos />,
+      },
+      {
+        path: '/artigos/:id',
+        element: <ArtigoView />,
       },
     ],
   },

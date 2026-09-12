@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Calculator, Star, AlertCircle, MessageSquare, BookOpen, Menu, X, Search } from 'lucide-react';
+import { LayoutDashboard, Calculator, Star, AlertCircle, MessageSquare, BookOpen, Menu, X, Search, FileText } from 'lucide-react';
 import AdSlot from '../AdSlot/AdSlot.jsx';
 import Footer from '../Footer/Footer.jsx';
 import './Layout.css';
@@ -19,6 +19,7 @@ const Layout = () => {
     { path: '/busca', icon: Search, label: 'Buscar Cursos', sub: 'Simulador de Cotas' },
     { path: '/sobras', icon: AlertCircle, label: 'Vagas Sobrando', sub: 'Oportunidades' },
     { path: '/regras', icon: BookOpen, label: 'Dicionário de Cotas', sub: 'Regras e Siglas' },
+    { path: '/artigos', icon: FileText, label: 'Artigos', sub: 'Blog & Dicas' },
   ];
 
   return (
