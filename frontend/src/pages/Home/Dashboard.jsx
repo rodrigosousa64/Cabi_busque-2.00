@@ -83,6 +83,25 @@ const Dashboard = () => {
             </div>
          </div>
       </section>
+      {/* Educational SEO Content for AdSense */}
+      <section className="educational-content">
+        <div className="edu-block">
+          <h2>Entenda como funciona a Nota TRI no ENEM</h2>
+          <p>
+            A Teoria de Resposta ao Item (TRI) é o modelo estatístico utilizado pelo INEP para calcular a nota do Exame Nacional do Ensino Médio (ENEM). Diferente de provas tradicionais, a TRI não contabiliza apenas o número de acertos. Ela avalia o nível de dificuldade de cada questão e a consistência das suas respostas. Isso significa que acertar questões fáceis e errar as difíceis gera uma nota maior do que acertar apenas as difíceis, pois o sistema entende o "chute". Nossa calculadora utiliza dados de edições anteriores para projetar uma estimativa da sua nota final com base no seu padrão de acertos.
+          </p>
+        </div>
+
+        <div className="edu-block">
+          <h2>O Sisu e as Universidades do Pará</h2>
+          <p>
+            O Sistema de Seleção Unificada (Sisu) é a principal porta de entrada para instituições públicas de ensino superior no Brasil. No estado do Pará, instituições de peso como a Universidade Federal do Pará (UFPA), Universidade do Estado do Pará (UEPA), Universidade Federal Rural da Amazônia (UFRA) e o Instituto Federal do Pará (IFPA) utilizam as notas do ENEM para selecionar seus alunos.
+          </p>
+          <p>
+            Cada universidade possui regras próprias, incluindo bônus regionais para estudantes locais e um sistema complexo de cotas (renda, escola pública, PPI, etc.). O Capi_busque ajuda a traduzir essas regras, mostrando exatamente quais são as notas de corte reais para o seu perfil sociodemográfico.
+          </p>
+        </div>
+      </section>
     </div>
   );
 };

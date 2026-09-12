@@ -224,6 +224,41 @@
   color: #fff;
 }
 
+/* EDUCATIONAL SEO CONTENT */
+.educational-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.edu-block {
+  background: rgba(20, 20, 20, 0.4);
+  border-left: 4px solid var(--accent-blue, #58a6ff);
+  padding: 24px;
+  border-radius: 0 16px 16px 0;
+}
+
+.edu-block h2 {
+  font-size: 1.3rem;
+  color: var(--text-primary, #ffffff);
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.edu-block p {
+  color: var(--text-secondary, #a0a0a0);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.edu-block p:last-child {
+  margin-bottom: 0;
+}
+
 /* MEDIA QUERIES FOR LARGER SCREENS */
 @media (min-width: 768px) {
   .hero-title {

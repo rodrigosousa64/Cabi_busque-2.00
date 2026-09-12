@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { LayoutDashboard, Calculator, Star, AlertCircle, MessageSquare, BookOpen, Menu, X, Search } from 'lucide-react';
 import AdSlot from '../AdSlot/AdSlot.jsx';
+import Footer from '../Footer/Footer.jsx';
 import './Layout.css';
 
 const Layout = () => {
@@ -76,6 +77,7 @@ const Layout = () => {
         <div className="content-area">
           <Outlet context={{ toggleSidebar }} />
         </div>
+        <Footer />
       </main>
 
       {/* ====== MOBILE BOTTOM NAV (Quick Access) ====== */}

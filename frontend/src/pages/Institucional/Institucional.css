@@ -1,0 +1,61 @@
+.institucional-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: var(--text-primary, #ffffff);
+}
+
+.institucional-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--accent-blue, #3b82f6);
+  font-family: monospace;
+}
+
+.institucional-page h2 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.institucional-page h3 {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #c0c0c0;
+}
+
+.institucional-page p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--text-secondary, #a0a0a0);
+  font-size: 1.05rem;
+}
+
+.institucional-page ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.institucional-page li {
+  line-height: 1.8;
+  margin-bottom: 10px;
+  color: var(--text-secondary, #a0a0a0);
+}
+
+.institucional-page a {
+  color: var(--accent-blue, #3b82f6);
+  text-decoration: none;
+}
+
+.institucional-page a:hover {
+  text-decoration: underline;
+}
+
+.institucional-page .last-updated {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-muted, #666);
+  margin-bottom: 40px;
+}
